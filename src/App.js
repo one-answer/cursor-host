@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Spinner, Alert, Image } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Spinner, Alert } from 'react-bootstrap';
 import './App.css';
 import DomainList from './components/DomainList';
 import HostsOutput from './components/HostsOutput';
