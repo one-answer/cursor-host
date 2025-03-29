@@ -59,27 +59,28 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="py-4">
+      <Container className="py-5">
         <Row className="mb-4">
           <Col>
             <Card className="shadow-sm">
-              <Card.Body>
-                <h1 className="text-center mb-4">Cursor Host Configuration Generator</h1>
-                <p className="text-center text-muted">
+              <Card.Body className="app-header py-4">
+                <h1 className="text-center mb-3">Cursor Host Configuration Generator</h1>
+                <p className="text-center text-muted mb-4">
                   实时获取指定域名的IP信息，自动生成hosts配置文件
                 </p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
                     {lastUpdated && (
-                      <small className="text-muted">
+                      <span className="last-updated">
                         Last updated: {lastUpdated.toLocaleString()}
-                      </small>
+                      </span>
                     )}
                   </div>
                   <Button 
                     variant="primary" 
                     onClick={fetchAllDomains} 
                     disabled={loading}
+                    className="px-4"
                   >
                     {loading ? (
                       <>
@@ -106,7 +107,7 @@ function App() {
         {error && (
           <Row className="mb-4">
             <Col>
-              <Alert variant="danger">{error}</Alert>
+              <Alert variant="danger" className="shadow-sm border-0">{error}</Alert>
             </Col>
           </Row>
         )}
@@ -117,6 +118,14 @@ function App() {
           </Col>
           <Col md={6}>
             <HostsOutput domains={domainData} />
+          </Col>
+        </Row>
+        
+        <Row className="mt-4">
+          <Col>
+            <div className="text-center text-muted small">
+              <p>© {new Date().getFullYear()} Cursor Host Generator. All rights reserved.</p>
+            </div>
           </Col>
         </Row>
       </Container>
