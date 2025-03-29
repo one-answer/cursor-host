@@ -10,12 +10,12 @@ const domains = [
   'api3.cursor.sh',
   'repo42.cursor.sh',
   'api4.cursor.sh',
-  'us-asia.gcpp.cursor.sh',
-  'us-eu.gcpp.cursor.sh',
   'us-only.gcpp.cursor.sh',
   'marketplace.cursorapi.com',
   'cursor-cdn.com',
-  'download.todesktop.com'
+  'download.todesktop.com',
+  'codeium.com',
+  'server.codeium.com'
 ];
 
 function App() {
