@@ -4,6 +4,31 @@
   min-height: 100vh;
 }
 
+/* Logo styling */
+.app-logo {
+  transition: transform 0.3s ease;
+}
+
+.app-logo:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.app-header:hover .app-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Card styling */
 .card {
   border: none;

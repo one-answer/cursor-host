@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Spinner, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Spinner, Alert, Image } from 'react-bootstrap';
 import './App.css';
 import DomainList from './components/DomainList';
 import HostsOutput from './components/HostsOutput';
@@ -64,9 +64,18 @@ function App() {
           <Col>
             <Card className="shadow-sm">
               <Card.Body className="app-header py-4">
-                <h1 className="text-center mb-3">Cursor Host Configuration Generator</h1>
+                <div className="text-center mb-3">
+                  <img 
+                    src="/cursor-host-icon.svg" 
+                    alt="Cursor Host Logo" 
+                    className="app-logo mb-3"
+                    width="80"
+                    height="80"
+                  />
+                  <h1 className="mb-2">Cursor Host Configuration Generator</h1>
+                </div>
                 <p className="text-center text-muted mb-4">
-                  实时获取指定域名的IP信息，自动生成hosts配置文件
+                  实时获取域名的IP信息，自动生成hosts配置文件
                 </p>
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
