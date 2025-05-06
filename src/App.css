@@ -167,12 +167,18 @@ footer {
   margin-top: 20px;
 }
 
-footer a {
+footer a, footer .footer-link {
   text-decoration: none;
   transition: color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
 }
 
-footer a:hover {
+footer a:hover, footer .footer-link:hover {
   color: #0069d9 !important;
   text-decoration: underline;
 }

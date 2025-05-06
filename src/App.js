@@ -161,9 +161,32 @@ function App() {
               <p>© {new Date().getFullYear()} Cursor, Windsurf & Augment Host Generator. All rights reserved.</p>
               <nav aria-label="Footer Navigation">
                 <ul className="list-inline">
-                  <li className="list-inline-item"><a href="#" className="text-muted">Privacy Policy</a></li>
-                  <li className="list-inline-item"><a href="#" className="text-muted">Terms of Service</a></li>
-                  <li className="list-inline-item"><a href="https://github.com/example/cursor-host" className="text-muted">GitHub</a></li>
+                  <li className="list-inline-item">
+                    <button
+                      onClick={() => window.alert('Privacy Policy page is under construction.')}
+                      className="text-muted footer-link"
+                    >
+                      Privacy Policy
+                    </button>
+                  </li>
+                  <li className="list-inline-item">
+                    <button
+                      onClick={() => window.alert('Terms of Service page is under construction.')}
+                      className="text-muted footer-link"
+                    >
+                      Terms of Service
+                    </button>
+                  </li>
+                  <li className="list-inline-item">
+                    <a
+                      href="https://github.com/example/cursor-host"
+                      className="text-muted"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </footer>
