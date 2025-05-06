@@ -8,9 +8,36 @@ const HostsOutput = ({ domains }) => {
   useEffect(() => {
     // Generate hosts file content from domain data
     const validDomains = domains.filter(item => item.status === 'success');
-    
+
     if (validDomains.length > 0) {
-      const content = validDomains.map(item => `${item.ip}\t${item.domain}`).join('\n');
+      // Group domains by category
+      const domainsByCategory = {};
+
+      validDomains.forEach(item => {
+        const category = item.category || 'Cursor';
+        if (!domainsByCategory[category]) {
+          domainsByCategory[category] = [];
+        }
+        domainsByCategory[category].push(item);
+      });
+
+      // Generate content with sections
+      let content = '';
+
+      // Order categories: Cursor first, then alphabetically
+      const categories = Object.keys(domainsByCategory).sort((a, b) => {
+        if (a === 'Cursor') return -1;
+        if (b === 'Cursor') return 1;
+        return a.localeCompare(b);
+      });
+
+      // Add each category section
+      categories.forEach((category, index) => {
+        if (index > 0) content += '\n\n';
+        content += `# ${category}\n`;
+        content += domainsByCategory[category].map(item => `${item.ip}\t${item.domain}`).join('\n');
+      });
+
       setHostsContent(content);
     } else {
       setHostsContent('');
@@ -34,9 +61,9 @@ const HostsOutput = ({ domains }) => {
     <Card className="shadow-sm h-100 position-relative">
       <Card.Header className="d-flex justify-content-between align-items-center">
         <h5 className="mb-0">Hosts File Configuration</h5>
-        <Button 
+        <Button
           variant={copied ? "success" : "outline-primary"}
-          size="sm" 
+          size="sm"
           onClick={handleCopy}
           disabled={!hostsContent}
           className={copied ? "copy-feedback" : ""}
@@ -83,7 +110,7 @@ const HostsOutput = ({ domains }) => {
       <Card.Footer className="bg-white border-top-0 text-muted small">
         <div className="d-flex align-items-center">
           <i className="bi bi-info-circle me-2"></i>
-          <span>Copy this content to your hosts file to improve connection to Cursor services.</span>
+          <span>Copy this content to your hosts file to improve connection to Cursor, Windsurf, and Augment services.</span>
         </div>
       </Card.Footer>
     </Card>

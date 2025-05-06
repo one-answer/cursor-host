@@ -21,8 +21,8 @@ const DomainList = ({ domains, loading }) => {
           </div>
         ) : (
           domains.map((item, index) => (
-            <ListGroup.Item 
-              key={index} 
+            <ListGroup.Item
+              key={index}
               className="domain-list-item d-flex justify-content-between align-items-center"
             >
               <div>
@@ -34,6 +34,11 @@ const DomainList = ({ domains, loading }) => {
                         <i className="bi bi-hdd-network"></i>
                       </span>
                       {item.ip}
+                      {item.category && item.category !== 'Cursor' && (
+                        <span className="ms-2 badge bg-light text-dark border">
+                          <small>{item.category}</small>
+                        </span>
+                      )}
                     </span>
                   ) : (
                     <span className="d-flex align-items-center">
@@ -45,7 +50,7 @@ const DomainList = ({ domains, loading }) => {
                   )}
                 </div>
               </div>
-              <Badge 
+              <Badge
                 bg={item.status === 'success' ? 'success' : 'danger'}
                 className="ms-2"
               >

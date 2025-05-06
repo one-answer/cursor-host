@@ -6,6 +6,7 @@ import HostsOutput from './components/HostsOutput';
 import { fetchDomainIps } from './services/dnsService';
 
 const domains = [
+  // Cursor domains
   'api2.cursor.sh',
   'api3.cursor.sh',
   'repo42.cursor.sh',
@@ -14,9 +15,23 @@ const domains = [
   'marketplace.cursorapi.com',
   'cursor-cdn.com',
   'download.todesktop.com',
+
+  // Windsurf domains
   'codeium.com',
-  'server.codeium.com'
+  'server.codeium.com',
+
+  // Augment domains
+  'i1.api.augmentcode.com',
+  'augmentcode.com'
 ];
+
+// Domain categories for grouping in the hosts file
+const domainCategories = {
+  'codeium.com': 'Windsurf',
+  'server.codeium.com': 'Windsurf',
+  'i1.api.augmentcode.com': 'Augment',
+  'augmentcode.com': 'Augment'
+};
 
 function App() {
   const [domainData, setDomainData] = useState([]);
@@ -28,14 +43,21 @@ function App() {
     setLoading(true);
     setError(null);
     try {
+      // Resolve all domains dynamically
       const results = await Promise.all(domains.map(domain => fetchDomainIps(domain)));
-      const domainResults = results.map((result, index) => ({
-        domain: domains[index],
-        ip: result.ip || 'Failed to resolve',
-        status: result.ip ? 'success' : 'error',
-        timestamp: new Date().toISOString()
-      }));
-      
+
+      // Create domain results with category information
+      const domainResults = results.map((result, index) => {
+        const domain = domains[index];
+        return {
+          domain: domain,
+          ip: result.ip || 'Failed to resolve',
+          status: result.ip ? 'success' : 'error',
+          timestamp: new Date().toISOString(),
+          category: domainCategories[domain] || 'Cursor' // Default to Cursor if no category specified
+        };
+      });
+
       setDomainData(domainResults);
       setLastUpdated(new Date());
     } catch (err) {
@@ -48,12 +70,12 @@ function App() {
 
   useEffect(() => {
     fetchAllDomains();
-    
+
     // Set up auto-refresh every 15 minutes
     const intervalId = setInterval(() => {
       fetchAllDomains();
     }, 15 * 60 * 1000);
-    
+
     return () => clearInterval(intervalId);
   }, []);
 
@@ -65,14 +87,14 @@ function App() {
             <Card className="shadow-sm">
               <Card.Body className="app-header py-4">
                 <div className="text-center mb-3">
-                  <img 
-                    src="/cursor-host-icon.svg" 
-                    alt="Cursor Host Logo" 
+                  <img
+                    src="/cursor-host-icon.svg"
+                    alt="Cursor Host Logo"
                     className="app-logo mb-3"
                     width="80"
                     height="80"
                   />
-                  <h1 className="mb-2">Cursor Host Configuration Generator</h1>
+                  <h1 className="mb-2">Cursor, Windsurf & Augment Host Configuration Generator</h1>
                 </div>
                 <p className="text-center text-muted mb-4">
                   实时获取域名的IP信息，自动生成hosts配置文件
@@ -85,9 +107,9 @@ function App() {
                       </span>
                     )}
                   </div>
-                  <Button 
-                    variant="primary" 
-                    onClick={fetchAllDomains} 
+                  <Button
+                    variant="primary"
+                    onClick={fetchAllDomains}
                     disabled={loading}
                     className="px-4"
                   >
@@ -129,11 +151,11 @@ function App() {
             <HostsOutput domains={domainData} />
           </Col>
         </Row>
-        
+
         <Row className="mt-4">
           <Col>
             <div className="text-center text-muted small">
-              <p>© {new Date().getFullYear()} Cursor Host Generator. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Cursor, Windsurf & Augment Host Generator. All rights reserved.</p>
             </div>
           </Col>
         </Row>
