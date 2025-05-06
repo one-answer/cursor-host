@@ -81,7 +81,10 @@ function App() {
 
   return (
     <div className="App">
-      <Container className="py-5">
+      <header>
+        <meta name="description" content="Generate optimized hosts file configurations for Cursor, Windsurf, and Augment services" />
+      </header>
+      <Container className="py-5" role="main" aria-label="Cursor, Windsurf & Augment Host Configuration Generator">
         <Row className="mb-4">
           <Col>
             <Card className="shadow-sm">
@@ -154,9 +157,16 @@ function App() {
 
         <Row className="mt-4">
           <Col>
-            <div className="text-center text-muted small">
+            <footer className="text-center text-muted small">
               <p>© {new Date().getFullYear()} Cursor, Windsurf & Augment Host Generator. All rights reserved.</p>
-            </div>
+              <nav aria-label="Footer Navigation">
+                <ul className="list-inline">
+                  <li className="list-inline-item"><a href="#" className="text-muted">Privacy Policy</a></li>
+                  <li className="list-inline-item"><a href="#" className="text-muted">Terms of Service</a></li>
+                  <li className="list-inline-item"><a href="https://github.com/example/cursor-host" className="text-muted">GitHub</a></li>
+                </ul>
+              </nav>
+            </footer>
           </Col>
         </Row>
       </Container>

@@ -43,8 +43,11 @@
 ├── public/                 # 静态资源目录
 │   ├── favicon.svg        # 网站图标
 │   ├── cursor-host-icon.svg # 应用图标
+│   ├── cursor-host-social.png # 社交媒体预览图
 │   ├── index.html         # HTML 入口文件
-│   └── manifest.json      # PWA 配置文件
+│   ├── manifest.json      # PWA 配置文件
+│   ├── robots.txt         # 搜索引擎爬虫指引文件
+│   └── sitemap.xml        # 网站地图
 │
 ├── src/                   # 源代码目录
 │   ├── components/        # React 组件
@@ -67,6 +70,18 @@
 - **React Bootstrap**：基于 Bootstrap 的 React 组件库
 - **Axios**：用于发送 HTTP 请求的库
 - **Bootstrap Icons**：提供丰富的图标集
+
+## SEO 优化
+
+本项目已经进行了全面的 SEO 优化，包括：
+
+- **元标签优化**：完整的标题、描述、关键词等元标签
+- **社交媒体元标签**：Open Graph 和 Twitter Card 标签，优化社交媒体分享效果
+- **结构化数据**：JSON-LD 格式的结构化数据，提高搜索引擎对网站的理解
+- **语义化 HTML**：使用语义化标签如 header、footer、nav 等
+- **网站地图**：提供 sitemap.xml 文件便于搜索引擎爬取
+- **爬虫指引**：提供 robots.txt 文件指导搜索引擎爬虫
+- **规范链接**：使用规范链接避免重复内容问题
 
 ## 本地开发
 

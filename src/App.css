@@ -160,3 +160,23 @@
   top: 10px;
   right: 10px;
 }
+
+/* Footer styling */
+footer {
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #0069d9 !important;
+  text-decoration: underline;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 15px;
+}
