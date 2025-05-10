@@ -22,6 +22,7 @@ const domains = [
 
   // Augment domains
   'i1.api.augmentcode.com',
+  'd6.api.augmentcode.com',
   'augmentcode.com'
 ];
 
@@ -30,6 +31,7 @@ const domainCategories = {
   'codeium.com': 'Windsurf',
   'server.codeium.com': 'Windsurf',
   'i1.api.augmentcode.com': 'Augment',
+  'd6.api.augmentcode.com': 'Augment',
   'augmentcode.com': 'Augment'
 };
 

@@ -10,7 +10,7 @@
 ## 支持服务
 - [Cursor 服务](https://cursor-host.aolifu.org)：优化 Cursor 编辑器及相关服务的网络连接
 - [Windsurf 服务](https://cursor-host.aolifu.org)：提升 Codeium AI 编码助手的响应速度
-- [Augment 服务](https://cursor-host.aolifu.org)：确保 Augment AI 开发工具的流畅运行
+- [Augment 服务](https://cursor-host.aolifu.org)：支持 i1/d6.api.augmentcode.com 等域名，确保 Augment AI 开发工具的流畅运行
 
 ## 使用方法
 - 访问网站，等待域名 IP 地址加载完成

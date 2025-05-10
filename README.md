@@ -35,6 +35,7 @@
 
 ### Augment 域名
 - i1.api.augmentcode.com
+- d6.api.augmentcode.com
 - augmentcode.com
 
 ## 源码目录结构

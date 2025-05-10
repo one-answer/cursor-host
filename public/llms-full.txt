@@ -25,7 +25,7 @@
 工具支持 Windsurf 相关的域名，包括 codeium.com 和 server.codeium.com。这些域名对于使用 Codeium AI 编码助手的开发者至关重要，优化这些域名的访问可以提高 AI 辅助编码的响应速度和稳定性。
 
 ### Augment 域名
-工具还支持 Augment 服务的相关域名，包括 i1.api.augmentcode.com 和 augmentcode.com。这些域名是使用 Augment AI 开发工具的必要组成部分，通过优化这些域名的访问，可以确保 Augment 服务的流畅运行。
+工具还支持 Augment 服务的相关域名，包括 i1.api.augmentcode.com、d6.api.augmentcode.com 和 augmentcode.com。这些域名是使用 Augment AI 开发工具的必要组成部分，通过优化这些域名的访问，可以确保 Augment 服务的流畅运行。
 
 ## 用户价值
 我们的工具为开发者提供了多方面的实际价值。首先，通过优化 hosts 配置，显著提升了开发工具的访问速度和稳定性，直接提高开发效率。其次，自动化的解析和配置生成过程，节省了手动查找和更新 IP 地址的时间和精力。
