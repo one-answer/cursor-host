@@ -60,7 +60,7 @@ const HostsOutput = ({ domains }) => {
   return (
     <Card className="shadow-sm h-100 position-relative">
       <Card.Header className="d-flex justify-content-between align-items-center">
-        <h5 className="mb-0">Hosts File Configuration</h5>
+        <h5 className="mb-0">Hosts 文件配置</h5>
         <Button
           variant={copied ? "success" : "outline-primary"}
           size="sm"
@@ -70,11 +70,11 @@ const HostsOutput = ({ domains }) => {
         >
           {copied ? (
             <span>
-              <i className="bi bi-check2"></i> Copied!
+              <i className="bi bi-check2"></i> 已复制!
             </span>
           ) : (
             <span>
-              <i className="bi bi-clipboard"></i> Copy
+              <i className="bi bi-clipboard"></i> 复制
             </span>
           )}
         </Button>
@@ -86,7 +86,7 @@ const HostsOutput = ({ domains }) => {
               <span className="me-2">
                 <i className="bi bi-info-circle"></i>
               </span>
-              <span>Loading domain information...</span>
+              <span>正在加载域名信息...</span>
             </div>
           </Alert>
         ) : hostsContent ? (
@@ -102,7 +102,7 @@ const HostsOutput = ({ domains }) => {
               <span className="me-2">
                 <i className="bi bi-exclamation-triangle"></i>
               </span>
-              <span>No valid domain IP addresses found.</span>
+              <span>未找到有效的域名 IP 地址。</span>
             </div>
           </Alert>
         )}
@@ -110,7 +110,7 @@ const HostsOutput = ({ domains }) => {
       <Card.Footer className="bg-white border-top-0 text-muted small">
         <div className="d-flex align-items-center">
           <i className="bi bi-info-circle me-2"></i>
-          <span>Copy this content to your hosts file to improve connection to Cursor, Windsurf, and Augmentcode services.</span>
+          <span>将此内容复制到您的 hosts 文件中，以提高 Cursor、Windsurf 和 Augmentcode 服务的连接速度。</span>
         </div>
       </Card.Footer>
     </Card>

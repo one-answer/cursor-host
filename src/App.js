@@ -84,9 +84,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <meta name="description" content="Generate optimized hosts file configurations for Cursor, Windsurf, and Augmentcode services" />
+        <meta name="description" content="自动生成优化的 Cursor、Windsurf 和 Augmentcode 服务 hosts 文件配置" />
       </header>
-      <Container className="py-5" role="main" aria-label="Cursor, Windsurf & Augmentcode Host Configuration Generator">
+      <Container className="py-5" role="main" aria-label="Cursor, Windsurf & Augmentcode Host 配置生成器">
         <Row className="mb-4">
           <Col>
             <Card className="shadow-sm">
@@ -99,7 +99,7 @@ function App() {
                     width="80"
                     height="80"
                   />
-                  <h1 className="mb-2">Cursor, Windsurf & Augmentcode Host Configuration Generator</h1>
+                  <h1 className="mb-2">Cursor, Windsurf & Augmentcode Host 配置生成器</h1>
                 </div>
                 <p className="text-center text-muted mb-4">
                   实时获取域名的IP信息，自动生成hosts配置文件
@@ -108,7 +108,7 @@ function App() {
                   <div>
                     {lastUpdated && (
                       <span className="last-updated">
-                        Last updated: {lastUpdated.toLocaleString()}
+                        最后更新时间: {lastUpdated.toLocaleString('zh-CN')}
                       </span>
                     )}
                   </div>
@@ -128,10 +128,10 @@ function App() {
                           aria-hidden="true"
                           className="me-2"
                         />
-                        Updating...
+                        正在更新...
                       </>
                     ) : (
-                      'Refresh Now'
+                      '立即刷新'
                     )}
                   </Button>
                 </div>
@@ -160,37 +160,7 @@ function App() {
         <Row className="mt-4">
           <Col>
             <footer className="text-center text-muted small">
-              <p>© {new Date().getFullYear()} Cursor, Windsurf & Augmentcode Host Generator. All rights reserved.</p>
-              <nav aria-label="Footer Navigation">
-                <ul className="list-inline">
-                  <li className="list-inline-item">
-                    <button
-                      onClick={() => window.alert('Privacy Policy page is under construction.')}
-                      className="text-muted footer-link"
-                    >
-                      Privacy Policy
-                    </button>
-                  </li>
-                  <li className="list-inline-item">
-                    <button
-                      onClick={() => window.alert('Terms of Service page is under construction.')}
-                      className="text-muted footer-link"
-                    >
-                      Terms of Service
-                    </button>
-                  </li>
-                  <li className="list-inline-item">
-                    <a
-                      href="https://github.com/example/cursor-host"
-                      className="text-muted"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <p>© {new Date().getFullYear()} Cursor, Windsurf & Augmentcode Host 生成器. 保留所有权利.</p>
             </footer>
           </Col>
         </Row>
