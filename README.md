@@ -1,4 +1,4 @@
-# Cursor, Windsurf & Augment Host Configuration Generator
+# Cursor, Windsurf & Augmentcode Host Configuration Generator
 
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://reactjs.org/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-7952B3?logo=bootstrap)](https://getbootstrap.com/)
@@ -6,12 +6,12 @@
 
 ## 简介
 
-这是一个用于生成 hosts 文件配置的工具，可以帮助用户更快地连接到 Cursor、Windsurf 和 Augment 服务。该工具会实时获取各个域名的 IP 地址，并自动生成格式化的 hosts 文件内容，用户可以一键复制并添加到自己的系统 hosts 文件中。
+这是一个用于生成 hosts 文件配置的工具，可以帮助用户更快地连接到 Cursor、Windsurf 和 Augmentcode 服务。该工具会实时获取各个域名的 IP 地址，并自动生成格式化的 hosts 文件内容，用户可以一键复制并添加到自己的系统 hosts 文件中。
 
 ## 功能特点
 
 - **实时 IP 解析**：动态获取所有域名的最新 IP 地址
-- **分类显示**：将域名按照服务类型（Cursor、Windsurf、Augment）分组显示
+- **分类显示**：将域名按照服务类型（Cursor、Windsurf、Augmentcode）分组显示
 - **一键复制**：快速复制生成的 hosts 配置内容
 - **自动刷新**：每 15 分钟自动刷新一次 IP 地址
 - **响应式设计**：适配各种设备屏幕大小
@@ -33,7 +33,7 @@
 - codeium.com
 - server.codeium.com
 
-### Augment 域名
+### Augmentcode 域名
 - i1.api.augmentcode.com
 - d6.api.augmentcode.com
 - augmentcode.com

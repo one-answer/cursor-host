@@ -1,16 +1,16 @@
-# Cursor, Windsurf & Augment Host
+# Cursor, Windsurf & Augmentcode Host
 
-> 实时获取 Cursor、Windsurf 和 Augment 服务的 IP 地址，自动生成 hosts 文件配置，提升开发工具的连接速度和稳定性。
+> 实时获取 Cursor、Windsurf 和 Augmentcode 服务的 IP 地址，自动生成 hosts 文件配置，提升开发工具的连接速度和稳定性。
 
 ## 核心功能
 - [实时 IP 解析](https://cursor-host.aolifu.org)：动态获取所有支持域名的最新 IP 地址
-- [分类显示管理](https://cursor-host.aolifu.org)：按服务类型（Cursor、Windsurf、Augment）分组显示域名
+- [分类显示管理](https://cursor-host.aolifu.org)：按服务类型（Cursor、Windsurf、Augmentcode）分组显示域名
 - [一键复制配置](https://cursor-host.aolifu.org)：自动生成格式化的 hosts 文件内容，一键复制到剪贴板
 
 ## 支持服务
 - [Cursor 服务](https://cursor-host.aolifu.org)：优化 Cursor 编辑器及相关服务的网络连接
 - [Windsurf 服务](https://cursor-host.aolifu.org)：提升 Codeium AI 编码助手的响应速度
-- [Augment 服务](https://cursor-host.aolifu.org)：支持 i1/d6.api.augmentcode.com 等域名，确保 Augment AI 开发工具的流畅运行
+- [Augmentcode 服务](https://cursor-host.aolifu.org)：支持 i1/d6.api.augmentcode.com 等域名，确保 Augmentcode AI 开发工具的流畅运行
 
 ## 使用方法
 - 访问网站，等待域名 IP 地址加载完成

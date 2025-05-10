@@ -110,7 +110,7 @@ const HostsOutput = ({ domains }) => {
       <Card.Footer className="bg-white border-top-0 text-muted small">
         <div className="d-flex align-items-center">
           <i className="bi bi-info-circle me-2"></i>
-          <span>Copy this content to your hosts file to improve connection to Cursor, Windsurf, and Augment services.</span>
+          <span>Copy this content to your hosts file to improve connection to Cursor, Windsurf, and Augmentcode services.</span>
         </div>
       </Card.Footer>
     </Card>

@@ -20,7 +20,7 @@ const domains = [
   'codeium.com',
   'server.codeium.com',
 
-  // Augment domains
+  // Augmentcode domains
   'i1.api.augmentcode.com',
   'd6.api.augmentcode.com',
   'augmentcode.com'
@@ -30,9 +30,9 @@ const domains = [
 const domainCategories = {
   'codeium.com': 'Windsurf',
   'server.codeium.com': 'Windsurf',
-  'i1.api.augmentcode.com': 'Augment',
-  'd6.api.augmentcode.com': 'Augment',
-  'augmentcode.com': 'Augment'
+  'i1.api.augmentcode.com': 'Augmentcode',
+  'd6.api.augmentcode.com': 'Augmentcode',
+  'augmentcode.com': 'Augmentcode'
 };
 
 function App() {
@@ -84,9 +84,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <meta name="description" content="Generate optimized hosts file configurations for Cursor, Windsurf, and Augment services" />
+        <meta name="description" content="Generate optimized hosts file configurations for Cursor, Windsurf, and Augmentcode services" />
       </header>
-      <Container className="py-5" role="main" aria-label="Cursor, Windsurf & Augment Host Configuration Generator">
+      <Container className="py-5" role="main" aria-label="Cursor, Windsurf & Augmentcode Host Configuration Generator">
         <Row className="mb-4">
           <Col>
             <Card className="shadow-sm">
@@ -99,7 +99,7 @@ function App() {
                     width="80"
                     height="80"
                   />
-                  <h1 className="mb-2">Cursor, Windsurf & Augment Host Configuration Generator</h1>
+                  <h1 className="mb-2">Cursor, Windsurf & Augmentcode Host Configuration Generator</h1>
                 </div>
                 <p className="text-center text-muted mb-4">
                   实时获取域名的IP信息，自动生成hosts配置文件
@@ -160,7 +160,7 @@ function App() {
         <Row className="mt-4">
           <Col>
             <footer className="text-center text-muted small">
-              <p>© {new Date().getFullYear()} Cursor, Windsurf & Augment Host Generator. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Cursor, Windsurf & Augmentcode Host Generator. All rights reserved.</p>
               <nav aria-label="Footer Navigation">
                 <ul className="list-inline">
                   <li className="list-inline-item">
